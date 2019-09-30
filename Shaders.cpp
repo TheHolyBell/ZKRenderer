@@ -2,7 +2,7 @@
 
 // VERTEX SHADER DEFINITION
 
-void VertexShader::Initialize(ID3D11Device* device, std::wstring shaderPath, D3D11_INPUT_ELEMENT_DESC* layoutDesc, int numElements, bool runTimeCompile)
+void VertexShader::Initialize(ID3D11Device* device, const std::wstring& shaderPath, D3D11_INPUT_ELEMENT_DESC* layoutDesc, int numElements, bool runTimeCompile)
 {
 	if (runTimeCompile)
 	{
@@ -39,7 +39,7 @@ ID3D11InputLayout* VertexShader::GetInputLayout() const noexcept
 
 // PIXEL SHADER DEFINITION
 
-void PixelShader::Initialize(ID3D11Device* device, std::wstring shaderPath, bool runTimeCompile)
+void PixelShader::Initialize(ID3D11Device* device, const std::wstring& shaderPath, bool runTimeCompile)
 {
 	if (runTimeCompile)
 	{
